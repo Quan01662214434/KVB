@@ -8,10 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; }
+    .fade-in { animation: fadeIn 1s ease-in-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-blue-50 text-gray-800">
-  <!-- Header with Mobile Menu -->
   <header class="bg-white shadow-lg sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="text-2xl font-extrabold text-blue-800 tracking-wide">KVB Support</div>
@@ -35,173 +39,148 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-16 text-center">
     <h1 class="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow">Trung Tâm Hỗ Trợ KVB</h1>
     <p class="text-lg md:text-xl max-w-2xl mx-auto">Hướng dẫn chi tiết mọi thao tác từ A-Z: Mở tài khoản, nạp tiền, giao dịch và rút tiền.</p>
   </section>
 
-<!-- Chi tiết nội dung hỗ trợ -->
-<section id="account" class="py-12 px-6 bg-white">
-  <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6">
-    <h2 class="text-2xl font-bold text-blue-800 mb-4">🔐 Hỗ trợ mở tài khoản</h2>
-    <ol class="list-decimal pl-6 space-y-2 text-gray-700">
-      <li>📱 Nhập số điện thoại cá nhân</li>
-      <li>✅ Chấp thuận điều khoản và cookie</li>
-      <li>🔑 Nhập mã code nhận qua SMS</li>
-      <li>📧 Nhập email và mã xác nhận</li>
-      <li>🔒 Tạo mật khẩu đăng nhập (2 lần)</li>
-      <li>🪪 Xác minh danh tính: chọn quốc gia, loại giấy tờ, tải ảnh</li>
-      <li>📊 (Tùy chọn) Điền kinh nghiệm đầu tư</li>
-      <li>🌐 Đăng nhập tại <a href="https://mykvb.com/login" class="text-blue-600 underline">mykvb.com</a></li>
-    </ol>
-    <img src="/mnt/data/6350f635-81ea-4b82-96a1-9f4e9f64d1f4.png" alt="Bước mở tài khoản" class="mt-6 rounded shadow">
-  </div>
-</section>
-
-<section id="deposit" class="py-12 px-6 bg-gray-50">
-  <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6">
-    <h2 class="text-2xl font-bold text-blue-800 mb-4">💳 Hỗ trợ nạp tiền</h2>
-    <p class="font-semibold text-gray-700 mb-2">🔸 Qua ngân hàng:</p>
-    <ol class="list-decimal pl-6 space-y-1 text-gray-700">
-      <li>Nhấn vào “Nạp tiền”</li>
-      <li>Chọn “Gửi tiền quét mã QR”</li>
-      <li>Nhập số tiền bằng đơn vị VND</li>
-      <li>Vào app ngân hàng quét mã để hoàn tất</li>
-    </ol>
-    <img src="/mnt/data/e089f91f-e396-40da-a7f5-1b7e5257f42a.png" alt="Nạp tiền qua ngân hàng" class="mt-6 rounded shadow">
-    <p class="font-semibold text-gray-700 mt-6 mb-2">🔸 Qua USDT:</p>
-    <ol class="list-decimal pl-6 space-y-1 text-gray-700">
-      <li>Chọn “Nạp tiền”</li>
-      <li>Chọn “Gửi tiền quét mã QR”</li>
-      <li>Nhập số USDT cần gửi</li>
-      <li>Dùng ví điện tử quét mã</li>
-    </ol>
-    <img src="/mnt/data/14d8c434-4d37-4c00-bad4-0a587429390a.png" alt="Nạp tiền qua USDT" class="mt-6 rounded shadow">
-  </div>
-</section>
-
-<section id="trade" class="py-12 px-6 bg-white">
-  <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6">
-    <h2 class="text-2xl font-bold text-blue-800 mb-4">📈 Hỗ trợ giao dịch</h2>
-    <ol class="list-decimal pl-6 space-y-2 text-gray-700">
-      <li>Đăng nhập vào <a class="text-blue-600 underline" href="https://mykvb.com/login">mykvb.com</a> hoặc app KVB</li>
-      <li>Chọn “Tạo tài khoản giao dịch”</li>
-      <li>Đặt và xác nhận mật khẩu giao dịch</li>
-      <li>Đồng ý điều khoản</li>
-      <li>Nếu lỗi → dùng trình duyệt để đăng nhập lại</li>
-    </ol>
-    <img src="/mnt/data/801dd9da-001b-4236-961e-2968e45ad74e.png" alt="Giao diện đăng nhập" class="mt-6 rounded shadow">
-    <img src="/mnt/data/714a0f5d-a6ff-4d9f-ac40-5cb91d60db50.png" alt="Tạo tài khoản giao dịch" class="mt-4 rounded shadow">
-  </div>
-</section>
-
-<section id="kyc" class="py-12 px-6 bg-gray-50">
-  <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6">
-    <h2 class="text-2xl font-bold text-blue-800 mb-4">📝 Hỗ trợ KYC & rút tiền</h2>
-    <p class="font-semibold">🔸 KYC Ngân hàng:</p>
-    <ol class="list-decimal pl-6 space-y-1 text-gray-700">
-      <li>Nhấn “Rút tiền” → chọn “Thêm tài khoản ngân hàng”</li>
-      <li>Chọn ngân hàng, nhập chi nhánh và số tài khoản</li>
-      <li>Tải bản sao kê hoặc ảnh app ngân hàng có tên & số tài khoản</li>
-    </ol>
-    <img src="/mnt/data/beb4586b-9b57-428a-883c-8bc3b80bf397.png" alt="KYC ngân hàng" class="mt-4 rounded shadow">
-    <p class="font-semibold mt-4">🔸 KYC Tiền điện tử:</p>
-    <ol class="list-decimal pl-6 space-y-1 text-gray-700">
-      <li>Nhấn “Rút tiền” → chọn “Thêm ví tiền điện tử”</li>
-      <li>Chọn loại tiền (USDT TRC20/ERC20)</li>
-      <li>Nhập địa chỉ ví và tải mã QR</li>
-    </ol>
-    <img src="/mnt/data/5d1d75ea-ae1c-4499-8143-816fa2c382ba.png" alt="KYC tiền điện tử" class="mt-4 rounded shadow">
-    <p class="font-semibold mt-4">🔸 Rút tiền:</p>
-    <ol class="list-decimal pl-6 space-y-1 text-gray-700">
-      <li>Chọn “Rút tiền”</li>
-      <li>Chọn tài khoản nguồn & nhập số tiền</li>
-      <li>Chọn phương thức nhận tiền</li>
-      <li>Nhấn “Kế tiếp” để hoàn tất</li>
-    </ol>
-    <img src="/mnt/data/f576e6c3-6308-496e-9b3d-d6aa155a2fc2.png" alt="Xác nhận rút tiền" class="mt-4 rounded shadow">
-  </div>
-</section>
-
-<section id="kyc" class="py-12 px-6 bg-gray-50">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-2xl font-bold text-blue-800 mb-4">📝 Hỗ trợ KYC & rút tiền</h2>
-    <p class="font-semibold">🔸 KYC Ngân hàng:</p>
-    <ol class="list-decimal pl-6 space-y-1 text-gray-700">
-      <li>Nhấn “Rút tiền” → chọn “Thêm tài khoản ngân hàng”</li>
-      <li>Chọn ngân hàng, nhập chi nhánh và số tài khoản</li>
-      <li>Tải bản sao kê hoặc ảnh app ngân hàng có tên & số tài khoản</li>
-    </ol>
-    <p class="font-semibold mt-4">🔸 KYC Tiền điện tử:</p>
-    <ol class="list-decimal pl-6 space-y-1 text-gray-700">
-      <li>Nhấn “Rút tiền” → chọn “Thêm ví tiền điện tử”</li>
-      <li>Chọn loại tiền (USDT TRC20/ERC20)</li>
-      <li>Nhập địa chỉ ví và tải mã QR</li>
-    </ol>
-    <p class="font-semibold mt-4">🔸 Rút tiền:</p>
-    <ol class="list-decimal pl-6 space-y-1 text-gray-700">
-      <li>Chọn “Rút tiền”</li>
-      <li>Chọn tài khoản nguồn & nhập số tiền</li>
-      <li>Chọn phương thức nhận tiền</li>
-      <li>Nhấn “Kế tiếp” để hoàn tất</li>
-    </ol>
-  </div>
-</section>
-
-<section class="bg-white py-12">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <h3 class="text-xl font-semibold text-blue-800 mb-4">📥 Tải các file hướng dẫn đầy đủ (PDF)</h3>
-    <ul class="list-disc text-blue-700 space-y-2 text-left inline-block">
-      <li><a href="/mnt/data/HƯỚNG DẪN MỞ TÀI KHOẢN.pdf" download class="underline">Tải PDF - Hướng dẫn mở tài khoản</a></li>
-      <li><a href="/mnt/data/HƯỚNG DẪN NẠP TIỀN KVB.pdf" download class="underline">Tải PDF - Hướng dẫn nạp tiền</a></li>
-      <li><a href="/mnt/data/HƯỚNG DẪN MỞ TÀI KHOẢN GIAO DỊCH.pdf" download class="underline">Tải PDF - Hướng dẫn giao dịch</a></li>
-      <li><a href="/mnt/data/HƯỚNG DẪN KYC NGÂN HÀNG VS RÚT TIỀN.pdf" download class="underline">Tải PDF - Hướng dẫn KYC và rút tiền</a></li>
-    </ul>
-  </div>
-</section>
-
-<!-- Navigation Tiles -->
   <section class="py-12 bg-white">
     <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <a href="#account" class="bg-gradient-to-br from-blue-100 to-white hover:scale-105 transition transform p-6 rounded-2xl shadow-xl border border-blue-200">
+      <a href="#account" class="bg-gradient-to-br from-blue-100 to-white hover:scale-105 transition transform p-6 rounded-2xl shadow-xl border border-blue-200 fade-in">
         <h3 class="text-xl font-semibold text-blue-700">🔐 Mở tài khoản</h3>
         <p class="text-sm text-gray-600 mt-2">Đăng ký tài khoản chi tiết</p>
       </a>
-      <a href="#deposit" class="bg-gradient-to-br from-blue-100 to-white hover:scale-105 transition transform p-6 rounded-2xl shadow-xl border border-blue-200">
+      <a href="#deposit" class="bg-gradient-to-br from-blue-100 to-white hover:scale-105 transition transform p-6 rounded-2xl shadow-xl border border-blue-200 fade-in">
         <h3 class="text-xl font-semibold text-blue-700">💳 Nạp tiền</h3>
         <p class="text-sm text-gray-600 mt-2">Các hình thức nạp tiền</p>
       </a>
-      <a href="#trade" class="bg-gradient-to-br from-blue-100 to-white hover:scale-105 transition transform p-6 rounded-2xl shadow-xl border border-blue-200">
+      <a href="#trade" class="bg-gradient-to-br from-blue-100 to-white hover:scale-105 transition transform p-6 rounded-2xl shadow-xl border border-blue-200 fade-in">
         <h3 class="text-xl font-semibold text-blue-700">📈 Giao dịch</h3>
         <p class="text-sm text-gray-600 mt-2">Hướng dẫn thao tác trên sàn</p>
       </a>
-      <a href="#kyc" class="bg-gradient-to-br from-blue-100 to-white hover:scale-105 transition transform p-6 rounded-2xl shadow-xl border border-blue-200">
+      <a href="#kyc" class="bg-gradient-to-br from-blue-100 to-white hover:scale-105 transition transform p-6 rounded-2xl shadow-xl border border-blue-200 fade-in">
         <h3 class="text-xl font-semibold text-blue-700">📝 KYC & Rút tiền</h3>
         <p class="text-sm text-gray-600 mt-2">Xác minh & rút tiền an toàn</p>
       </a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white text-sm py-6 text-center">
+<section id="account" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start fade-in">
+    <div>
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">🔐 Hỗ trợ mở tài khoản</h2>
+      <ol class="list-decimal pl-6 space-y-3 text-gray-700 text-lg">
+        <li>📱 Nhập số điện thoại cá nhân</li>
+        <li>✅ Chấp thuận điều khoản và cookie</li>
+        <li>🔑 Nhập mã code nhận qua SMS</li>
+        <li>📧 Nhập email và mã xác nhận</li>
+        <li>🔒 Tạo mật khẩu đăng nhập (2 lần)</li>
+        <li>🪪 Xác minh danh tính: chọn quốc gia, loại giấy tờ, tải ảnh</li>
+        <li>📊 (Tùy chọn) Điền kinh nghiệm đầu tư</li>
+        <li>🌐 Đăng nhập tại <a href="https://mykvb.com/login" class="text-blue-600 underline">mykvb.com</a></li>
+      </ol>
+    </div>
+    <div class="space-y-4">
+      <img src="/mnt/data/6350f635-81ea-4b82-96a1-9f4e9f64d1f4.png" class="rounded-xl shadow-lg" alt="Hướng dẫn bước mở tài khoản">
+      <img src="/mnt/data/0d2167bc-c5f3-4f9d-9866-948f74b3d92c.png" class="rounded-xl shadow-lg" alt="Điền thông tin cá nhân">
+    </div>
+  </div>
+</section>
+
+<section id="deposit" class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start fade-in">
+    <div>
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">💳 Hỗ trợ nạp tiền</h2>
+      <p class="font-semibold text-gray-700 mb-2">🔸 Qua ngân hàng:</p>
+      <ol class="list-decimal pl-6 space-y-1 text-gray-700">
+        <li>Nhấn vào “Nạp tiền”</li>
+        <li>Chọn “Gửi tiền quét mã QR”</li>
+        <li>Nhập số tiền bằng đơn vị VND</li>
+        <li>Vào app ngân hàng quét mã để hoàn tất</li>
+      </ol>
+      <p class="font-semibold text-gray-700 mt-4 mb-2">🔸 Qua USDT:</p>
+      <ol class="list-decimal pl-6 space-y-1 text-gray-700">
+        <li>Chọn “Nạp tiền”</li>
+        <li>Chọn “Gửi tiền quét mã QR”</li>
+        <li>Nhập số USDT cần gửi</li>
+        <li>Dùng ví điện tử quét mã</li>
+      </ol>
+    </div>
+    <div class="space-y-4">
+      <img src="/mnt/data/e089f91f-e396-40da-a7f5-1b7e5257f42a.png" class="rounded-xl shadow-lg" alt="Nạp tiền QR ngân hàng">
+      <img src="/mnt/data/14d8c434-4d37-4c00-bad4-0a587429390a.png" class="rounded-xl shadow-lg" alt="Nạp tiền bằng USDT">
+    </div>
+  </div>
+</section>
+
+<section id="trade" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start fade-in">
+    <div>
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">📈 Hỗ trợ giao dịch</h2>
+      <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+        <li>Đăng nhập vào <a class="text-blue-600 underline" href="https://mykvb.com/login">mykvb.com</a> hoặc app KVB</li>
+        <li>Chọn “Tạo tài khoản giao dịch”</li>
+        <li>Đặt và xác nhận mật khẩu giao dịch</li>
+        <li>Đồng ý điều khoản</li>
+        <li>Nếu lỗi → dùng trình duyệt để đăng nhập lại</li>
+      </ol>
+    </div>
+    <div class="space-y-4">
+      <img src="/mnt/data/801dd9da-001b-4236-961e-2968e45ad74e.png" class="rounded-xl shadow-lg" alt="Đăng nhập giao dịch">
+      <img src="/mnt/data/714a0f5d-a6ff-4d9f-ac40-5cb91d60db50.png" class="rounded-xl shadow-lg" alt="Tạo tài khoản giao dịch">
+    </div>
+  </div>
+</section>
+
+<section id="kyc" class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start fade-in">
+    <div>
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">📝 Hỗ trợ KYC & rút tiền</h2>
+      <p class="font-semibold">🔸 KYC Ngân hàng:</p>
+      <ol class="list-decimal pl-6 space-y-1 text-gray-700">
+        <li>Nhấn “Rút tiền” → chọn “Thêm tài khoản ngân hàng”</li>
+        <li>Chọn ngân hàng, nhập chi nhánh và số tài khoản</li>
+        <li>Tải bản sao kê hoặc ảnh app ngân hàng có tên & số tài khoản</li>
+      </ol>
+      <p class="font-semibold mt-4">🔸 KYC Tiền điện tử:</p>
+      <ol class="list-decimal pl-6 space-y-1 text-gray-700">
+        <li>Nhấn “Rút tiền” → chọn “Thêm ví tiền điện tử”</li>
+        <li>Chọn loại tiền (USDT TRC20/ERC20)</li>
+        <li>Nhập địa chỉ ví và tải mã QR</li>
+      </ol>
+      <p class="font-semibold mt-4">🔸 Rút tiền:</p>
+      <ol class="list-decimal pl-6 space-y-1 text-gray-700">
+        <li>Chọn “Rút tiền”</li>
+        <li>Chọn tài khoản nguồn & nhập số tiền</li>
+        <li>Chọn phương thức nhận tiền</li>
+        <li>Nhấn “Kế tiếp” để hoàn tất</li>
+      </ol>
+    </div>
+    <div class="space-y-4">
+      <img src="/mnt/data/beb4586b-9b57-428a-883c-8bc3b80bf397.png" class="rounded-xl shadow-lg" alt="KYC ngân hàng">
+      <img src="/mnt/data/5d1d75ea-ae1c-4499-8143-816fa2c382ba.png" class="rounded-xl shadow-lg" alt="KYC tiền điện tử">
+      <img src="/mnt/data/f576e6c3-6308-496e-9b3d-d6aa155a2fc2.png" class="rounded-xl shadow-lg" alt="Xác nhận rút tiền">
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-900 text-white text-sm py-6 text-center">
     © 2025 KVB Support. Hotline: 0123 456 789 | Email: hotro@kvbplus.com
   </footer>
 
-<script>
-  // Smooth scroll for all anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        window.scrollTo({
-          top: target.offsetTop - 100,
-          behavior: 'smooth'
-        });
-      }
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
