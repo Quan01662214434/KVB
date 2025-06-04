@@ -1,23 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trung Tâm Hỗ Trợ KVB</title>
+  <title>KVB Support Center</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .lang-toggle button.active {
+      background-color: #2563eb;
+      color: white;
+    }
+  </style>
 </head>
 <body class="bg-gradient-to-b from-white to-blue-50 min-h-screen">
   <header class="bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-50">
-    <div class="text-xl font-bold text-blue-700">KVB Hỗ Trợ</div>
+    <div class="text-xl font-bold text-blue-700">KVB Support</div>
+    <div class="lang-toggle flex space-x-2">
+      <button onclick="switchLang('vi')" class="px-3 py-1 rounded-md border border-blue-500 text-blue-700 active">VI</button>
+      <button onclick="switchLang('en')" class="px-3 py-1 rounded-md border border-blue-500 text-blue-700">EN</button>
+    </div>
   </header>
 
-  <main class="p-6 max-w-5xl mx-auto">
-    <h1 class="text-4xl font-bold text-center text-blue-800 mb-10">💼 Trung Tâm Hỗ Trợ Khách Hàng</h1>
+  <main class="p-6 max-w-5xl mx-auto space-y-10">
+    <h1 class="text-4xl font-bold text-center text-blue-800">💼 Trung Tâm Hỗ Trợ / Support Center</h1>
 
-    <section class="bg-white rounded-xl shadow-md p-6 mb-8">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">🔐 Hướng dẫn mở tài khoản</h2>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2">
+    <section class="bg-white rounded-xl shadow-md p-6">
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">🔐 <span class="lang vi">Hướng dẫn mở tài khoản</span><span class="lang en hidden">How to open an account</span></h2>
+      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang vi">
         <li>Tải app KVB Global hoặc truy cập website chính thức.</li>
         <li>Nhấn vào “Đăng ký” và nhập số điện thoại.</li>
         <li>Nhập mã OTP xác thực.</li>
@@ -25,11 +34,19 @@
         <li>Nhập thông tin cá nhân theo hướng dẫn.</li>
         <li>Xác minh email và hoàn tất hồ sơ.</li>
       </ol>
+      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang en hidden">
+        <li>Download KVB Global app or visit the official website.</li>
+        <li>Click "Register" and enter your phone number.</li>
+        <li>Enter the OTP verification code.</li>
+        <li>Set your login password.</li>
+        <li>Fill in personal information as instructed.</li>
+        <li>Verify your email and complete your profile.</li>
+      </ol>
     </section>
 
-    <section class="bg-white rounded-xl shadow-md p-6 mb-8">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">💳 Hướng dẫn nạp tiền</h2>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2">
+    <section class="bg-white rounded-xl shadow-md p-6">
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">💳 <span class="lang vi">Hướng dẫn nạp tiền</span><span class="lang en hidden">How to deposit funds</span></h2>
+      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang vi">
         <li>Đăng nhập app hoặc website KVB.</li>
         <li>Chọn “Nạp tiền”.</li>
         <li>Chọn phương thức nạp: ngân hàng, ví, USDT...</li>
@@ -38,35 +55,38 @@
         <li>Chuyển khoản đúng nội dung và số tiền.</li>
         <li>Chờ xác nhận (5–10 phút).</li>
       </ol>
-      <p class="mt-2 text-red-600">⚠️ Lưu ý: Không dùng tài khoản người khác để chuyển khoản.</p>
+      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang en hidden">
+        <li>Log in to KVB app or website.</li>
+        <li>Select “Deposit”.</li>
+        <li>Choose a deposit method: bank, wallet, USDT...</li>
+        <li>Enter the amount and select the currency.</li>
+        <li>Click “Send” and scan the QR code.</li>
+        <li>Transfer with correct amount and message.</li>
+        <li>Wait for confirmation (5–10 minutes).</li>
+      </ol>
     </section>
 
-    <section class="bg-white rounded-xl shadow-md p-6 mb-8">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">📈 Hướng dẫn giao dịch</h2>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2">
+    <section class="bg-white rounded-xl shadow-md p-6">
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">📈 <span class="lang vi">Hướng dẫn giao dịch</span><span class="lang en hidden">How to trade</span></h2>
+      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang vi">
         <li>Đăng nhập web hoặc app KVB.</li>
         <li>Chọn “Mở tài khoản giao dịch”.</li>
         <li>Thiết lập mật khẩu và đồng ý điều khoản.</li>
         <li>Truy cập nền tảng MT4 và bắt đầu giao dịch.</li>
       </ol>
+      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang en hidden">
+        <li>Log in to the KVB website or app.</li>
+        <li>Select “Open trading account”.</li>
+        <li>Set password and agree to terms.</li>
+        <li>Access MT4 platform and start trading.</li>
+      </ol>
     </section>
 
-    <section class="bg-white rounded-xl shadow-md p-6 mb-8">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">📝 Hướng dẫn KYC & Rút tiền</h2>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2">
+    <section class="bg-white rounded-xl shadow-md p-6">
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">📝 <span class="lang vi">Hướng dẫn KYC & Rút tiền</span><span class="lang en hidden">KYC & Withdrawal Guide</span></h2>
+      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang vi">
         <li>Truy cập mục “Rút tiền”.</li>
         <li>Thêm tài khoản ngân hàng hoặc địa chỉ ví.</li>
         <li>Điền đầy đủ thông tin cá nhân.</li>
         <li>Tải lên ảnh sao kê hoặc QR ví điện tử.</li>
-        <li>Nhập số tiền cần rút và xác nhận.</li>
-      </ol>
-    </section>
-
-    <div class="mt-10 p-6 bg-blue-100 border border-blue-300 rounded-xl">
-      <h2 class="text-2xl font-semibold text-blue-800 mb-2">📞 Liên hệ bộ phận kỹ thuật</h2>
-      <p class="text-gray-800 mb-1">Hotline: <a href="tel:0123456789" class="text-blue-700 hover:underline">0123 456 789</a></p>
-      <p class="text-gray-800">Email: <a href="mailto:hotro@kvbplus.com" class="text-blue-700 hover:underline">hotro@kvbplus.com</a></p>
-    </div>
-  </main>
-</body>
-</html>
+        <li>Nhập số tiền cần rút và xác
