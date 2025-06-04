@@ -1,40 +1,43 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KVB Support Center</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    .lang-toggle button.active {
-      background-color: #2563eb;
-      color: white;
-    }
+    body { font-family: 'Inter', sans-serif; }
+    .active-tab { background-color: #2563eb; color: white; }
   </style>
 </head>
-<body class="bg-gradient-to-b from-white to-blue-50 min-h-screen">
-  <header class="bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-50">
-    <div class="text-xl font-bold text-blue-700">KVB Support</div>
-    <div class="lang-toggle flex space-x-2">
-      <button onclick="switchLang('vi')" class="px-3 py-1 rounded-md border border-blue-500 text-blue-700 active">VI</button>
-      <button onclick="switchLang('en')" class="px-3 py-1 rounded-md border border-blue-500 text-blue-700">EN</button>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-blue-700">KVB Support</div>
+      <nav class="space-x-6 hidden md:flex font-medium text-gray-700">
+        <a href="#account" class="hover:text-blue-700">Open Account</a>
+        <a href="#deposit" class="hover:text-blue-700">Deposit</a>
+        <a href="#trade" class="hover:text-blue-700">Trading</a>
+        <a href="#kyc" class="hover:text-blue-700">KYC & Withdrawal</a>
+      </nav>
     </div>
   </header>
 
-  <main class="p-6 max-w-5xl mx-auto space-y-10">
-    <h1 class="text-4xl font-bold text-center text-blue-800">💼 Trung Tâm Hỗ Trợ / Support Center</h1>
+  <!-- Hero Section -->
+  <section class="bg-blue-900 text-white py-20 text-center">
+    <h1 class="text-4xl font-bold">Professional Customer Support Portal</h1>
+    <p class="mt-4 text-lg max-w-2xl mx-auto">Access reliable and step-by-step guides for all trading operations: Account, Deposit, KYC, and more.</p>
+    <a href="#account" class="mt-6 inline-block bg-white text-blue-800 px-6 py-3 rounded-full font-semibold transition hover:bg-gray-200">Get Started</a>
+  </section>
 
-    <section class="bg-white rounded-xl shadow-md p-6">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">🔐 <span class="lang vi">Hướng dẫn mở tài khoản</span><span class="lang en hidden">How to open an account</span></h2>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang vi">
-        <li>Tải app KVB Global hoặc truy cập website chính thức.</li>
-        <li>Nhấn vào “Đăng ký” và nhập số điện thoại.</li>
-        <li>Nhập mã OTP xác thực.</li>
-        <li>Thiết lập mật khẩu đăng nhập.</li>
-        <li>Nhập thông tin cá nhân theo hướng dẫn.</li>
-        <li>Xác minh email và hoàn tất hồ sơ.</li>
-      </ol>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang en hidden">
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-6 py-16 space-y-20">
+    <!-- Open Account -->
+    <section id="account" class="bg-white p-8 rounded-2xl shadow-md">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-4">🔐 Open Account</h2>
+      <ol class="list-decimal space-y-2 pl-6 text-gray-700">
         <li>Download KVB Global app or visit the official website.</li>
         <li>Click "Register" and enter your phone number.</li>
         <li>Enter the OTP verification code.</li>
@@ -44,18 +47,10 @@
       </ol>
     </section>
 
-    <section class="bg-white rounded-xl shadow-md p-6">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">💳 <span class="lang vi">Hướng dẫn nạp tiền</span><span class="lang en hidden">How to deposit funds</span></h2>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang vi">
-        <li>Đăng nhập app hoặc website KVB.</li>
-        <li>Chọn “Nạp tiền”.</li>
-        <li>Chọn phương thức nạp: ngân hàng, ví, USDT...</li>
-        <li>Nhập số tiền và chọn loại tiền tệ.</li>
-        <li>Nhấn “Gửi tiền” và quét mã QR.</li>
-        <li>Chuyển khoản đúng nội dung và số tiền.</li>
-        <li>Chờ xác nhận (5–10 phút).</li>
-      </ol>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang en hidden">
+    <!-- Deposit -->
+    <section id="deposit" class="bg-white p-8 rounded-2xl shadow-md">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-4">💳 Deposit</h2>
+      <ol class="list-decimal space-y-2 pl-6 text-gray-700">
         <li>Log in to KVB app or website.</li>
         <li>Select “Deposit”.</li>
         <li>Choose a deposit method: bank, wallet, USDT...</li>
@@ -66,15 +61,10 @@
       </ol>
     </section>
 
-    <section class="bg-white rounded-xl shadow-md p-6">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">📈 <span class="lang vi">Hướng dẫn giao dịch</span><span class="lang en hidden">How to trade</span></h2>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang vi">
-        <li>Đăng nhập web hoặc app KVB.</li>
-        <li>Chọn “Mở tài khoản giao dịch”.</li>
-        <li>Thiết lập mật khẩu và đồng ý điều khoản.</li>
-        <li>Truy cập nền tảng MT4 và bắt đầu giao dịch.</li>
-      </ol>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang en hidden">
+    <!-- Trading -->
+    <section id="trade" class="bg-white p-8 rounded-2xl shadow-md">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-4">📈 Trading</h2>
+      <ol class="list-decimal space-y-2 pl-6 text-gray-700">
         <li>Log in to the KVB website or app.</li>
         <li>Select “Open trading account”.</li>
         <li>Set password and agree to terms.</li>
@@ -82,11 +72,29 @@
       </ol>
     </section>
 
-    <section class="bg-white rounded-xl shadow-md p-6">
-      <h2 class="text-2xl font-bold text-blue-700 mb-4">📝 <span class="lang vi">Hướng dẫn KYC & Rút tiền</span><span class="lang en hidden">KYC & Withdrawal Guide</span></h2>
-      <ol class="list-decimal pl-6 text-gray-700 space-y-2 lang vi">
-        <li>Truy cập mục “Rút tiền”.</li>
-        <li>Thêm tài khoản ngân hàng hoặc địa chỉ ví.</li>
-        <li>Điền đầy đủ thông tin cá nhân.</li>
-        <li>Tải lên ảnh sao kê hoặc QR ví điện tử.</li>
-        <li>Nhập số tiền cần rút và xác
+    <!-- KYC & Withdrawal -->
+    <section id="kyc" class="bg-white p-8 rounded-2xl shadow-md">
+      <h2 class="text-2xl font-semibold text-blue-700 mb-4">📝 KYC & Withdrawal</h2>
+      <ol class="list-decimal space-y-2 pl-6 text-gray-700">
+        <li>Go to the “Withdraw” section.</li>
+        <li>Add a bank account or wallet address.</li>
+        <li>Enter full personal details.</li>
+        <li>Upload statement image or wallet QR.</li>
+        <li>Enter amount and confirm withdrawal.</li>
+      </ol>
+    </section>
+
+    <!-- Contact -->
+    <section class="bg-blue-100 border border-blue-300 rounded-xl p-8">
+      <h2 class="text-2xl font-semibold text-blue-800 mb-2">📞 Technical Support</h2>
+      <p class="text-gray-800 mb-1">Hotline: <a href="tel:0123456789" class="text-blue-700 hover:underline">0123 456 789</a></p>
+      <p class="text-gray-800">Email: <a href="mailto:hotro@kvbplus.com" class="text-blue-700 hover:underline">hotro@kvbplus.com</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-sm py-6 text-center">
+    © 2025 KVB Support. All rights reserved.
+  </footer>
+</body>
+</html>
